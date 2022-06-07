@@ -255,3 +255,27 @@ ___________________________________________________
 
 
 -- end;
+____________________________________
+
+create or replace trigger emp_security before  
+update on emp 
+for each row 
+begin 
+insert into security 
+(old_empno,my_user,rec_date) 
+values (:old.empno,user,sysdate); 
+end;
+___________________________________
+
+declare
+    country_name country.country_name%TYPE = 'Egypt';
+    airports country.airport %TYPE;
+begin
+    SELECT airports into airports 
+        FROM countries
+        WHERE country_name = country_name;
+        
+    
+
+
+end;
