@@ -43,5 +43,22 @@ end;
 
 _________________
 
+declare
+    myname varchar(255) := 'Abdelrhman';
 
+
+    i number := 0;
+    counter number := -1;
+begin
+
+for i in 0..length(myname) loop
+    counter := counter + 1;
+end loop;
+
+
+dbms_output.put_line(length(myname));
+
+dbms_output.put_line(counter);
+
+end;
 
