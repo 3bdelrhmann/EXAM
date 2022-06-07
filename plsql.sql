@@ -214,3 +214,44 @@ pay_raise;
 
 end;
 /
+___________________________________________________
+
+-- CREATE table students(
+--     st_nu number
+-- )
+
+-- declare
+
+-- x number := 1;
+
+-- begin
+
+-- loop
+--     exit when x > 100;
+--     INSERT INTO students values(x);
+--     x := x + 1;
+-- end loop;
+
+-- end;
+
+-- select * from students
+
+
+-- declare 
+
+--     x number := 1;
+
+-- begin
+--     loop
+--         exit when x > 100;
+        
+--         delete from students 
+--         where st_nu = x;
+        
+--         x := x + 2;
+        
+--     end loop;
+
+
+
+-- end;
