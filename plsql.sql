@@ -198,8 +198,6 @@ end;
 ________________________________________________________________________________________________
 
 
-
-
 create or replace procedure pay_raise as
 begin
     update hr.employees
@@ -275,7 +273,26 @@ begin
         FROM countries
         WHERE country_name = country_name;
         
+end;
+______________________________________
+
+declare
+    cursor get_emp is
+        SELECT * FROM hr.employees
+        ORDER BY HR.EMPLOYEES.SALARY asc;
+
+emp hr.employees%rowtype;
+
+begin
     
+    open get_emp;
 
+        loop
+            exit when get_emp%rowcount > 21;
+            FETCH get_emp into emp;
+            dbms_output.put_line(emp.salary);
+        end loop;
 
+    
+    close get_emp;
 end;
