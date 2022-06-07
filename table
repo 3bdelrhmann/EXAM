@@ -14,3 +14,34 @@ UPDATE grocery_items
     where product_id = 112
 
 SELECT * FROM grocery_items ORDER BY product_id ASC
+
+
+______________
+
+declare
+
+country countr.country_name%TYPE;
+population number := 10000000000;
+
+begin
+country := &x;
+
+SELECT population into population 
+    FROM country
+    WHERE country_name = country;
+    
+    if(population > 1000000000)THEN
+        dbms_output.put_line('greater than 1');
+    elsif (population > 0) THEN
+        dbms_output.put_line('greater than 0');
+    elsif (population = 0) THEN
+        dbms_output.put_line('equal zero');
+    elsif(population = Null) then
+        dbms_output.put_line('no data');
+    end if;
+end;
+
+_________________
+
+
+
