@@ -1,0 +1,22 @@
+-- SELECT upper(first_name) from hr.employees
+--     where employee_id = 122;
+    
+-- SELECT concat(concat(first_name, ' '), last_name) as Full_name from hr.employees
+--     where employee_id = 122;
+    
+-- SELECT instr(first_name, 'P') from hr.employees
+--     where employee_id = 122;
+
+-- SELECT trim('                                           Abdelrhman                                           ') FROM DUAL;
+
+-- SELECT replace('SQL Tutorial', 'T', 'M') from dual;
+
+-- SELECT mod(5,2) from dual;
+
+-- SELECT mod(5,2) from dual;
+
+-- SELECT add_months(hire_date,3) from hr.employees
+
+-- SELECT next_day(hire_date,'TUESDAY') from hr.employees
+
+SELECT SYSDATE from dual
