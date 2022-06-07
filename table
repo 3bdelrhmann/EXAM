@@ -62,3 +62,20 @@ dbms_output.put_line(counter);
 
 end;
 
+___________________________
+
+declare
+
+    my_date date := sysdate;
+    v_last_day date := last_day(my_date);
+
+begin
+
+dbms_output.put_line(v_last_day);
+
+my_date := my_date + 45;
+
+dbms_output.put_line(round(months_between(my_date, v_last_day)));
+
+
+end;
